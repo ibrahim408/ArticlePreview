@@ -1,0 +1,207 @@
+@import url(https://fonts.googleapis.com/css?family=Manrope);
+
+:root {
+    --very-dark-grayish-blue:  #48556A;
+    --desaturated-dark-blue: #6D7D97;
+    --grayish-blue: #9EAFC2;
+    --light-grayish-blue: #ECF2F8;
+    --white: #fff;
+}
+body{
+    margin: 0px;
+}
+h3{
+    color: var(--very-dark-grayish-blue);
+    font-weight: 600;
+    font-family: 'Manrope', serif;
+}
+p{
+    font-weight: 400;
+    line-height: 1.8;
+    color: var(--desaturated-dark-blue);
+    font-family: 'Manrope', serif;
+    font-size: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+i{
+    color: var(--very-dark-grayish-blue);
+}
+.main{
+    height: 100vh;
+    width: 100vw;
+    background: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-body{
+    display: flex;
+    flex-direction: column;
+    width: 85vw;
+    height: 75vh;
+    min-height: 300px;
+    background-color: var(--white);
+    border-radius: 10px;
+}
+@media only screen and (min-width: 1100px){
+    .main-body{
+        flex-direction: row;
+        height: 310px;
+        max-height: 200px;
+        width: 750px;
+    }
+    .cover-container{
+        flex: 7;
+        background-color: red;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .main-body{
+        max-width: 400px;
+        min-width: 350px;
+        min-height: 600px;
+        max-height: 200px;
+    }
+    .cover-container{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+}
+.cover-container{
+    flex: 2;
+    background: url(imgs/drawers.jpg);
+    background-size:     cover;                   
+    background-repeat:   no-repeat;
+    background-position: center center;
+    overflow: hidden  
+}
+.content-container{
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 0px 20px;
+}
+.top-content-container{
+    flex: 4;
+    padding-top: 20px;
+}
+.bottom-content-container{
+    padding-bottom: 10px;
+    flex: 1;
+    display: flex;
+    position: relative;
+}
+.left-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.img-container{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+.img-avater-style{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 50%;
+}
+.middle-content-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+    flex: 3;
+}
+.text-name-style{
+    font-weight: 500;
+    color: var(--very-dark-grayish-blue);
+    /* margin-top: .2em; */
+    margin-bottom: 0px;
+}
+.text-date-style{
+    margin-top: .5em;
+    color: var(--desaturated-dark-blue);
+}
+.right-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+.share-icon-container{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: var(--light-grayish-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.share-icon-container:hover{
+    background-color: var(--very-dark-grayish-blue);
+}
+.share-icon-container:hover > #share-icon { 
+    color: var(--light-grayish-blue);
+}
+
+@media only screen and (min-width: 1100px){
+    .share-expand{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        position: absolute;
+        top: -50px;
+        right: -70px;
+        height: 50px;
+        width: 250px;
+        border-radius: 5px;
+        background-color: var(--very-dark-grayish-blue);
+    }
+    .share-expand::after{
+        content: "";
+        position: absolute;
+        top: 50px;
+        left: 40%;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #49556b;
+    }
+}
+
+@media only screen and (max-width: 1100px){
+    .share-expand{
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        right: -20px;
+        left: -20px;
+        background-color: var(--very-dark-grayish-blue);
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+    .icon-margin-left{
+        margin-left: 20px;
+    }
+    
+}
+.icon-color{
+    color: #fff;
+    font-size: 55px;
+}
+.share-font-style{
+    font-size: 18px;
+    letter-spacing: 3px;
+}
+
+.upfront{
+    z-index: 999;
+}
